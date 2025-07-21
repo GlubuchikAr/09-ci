@@ -1,9 +1,10 @@
-### Домашнее задание к занятию "09.01 Жизненный цикл ПО"
+### Домашнее задание к занятию 7 «Жизненный цикл ПО»
 
 #### Подготовка к выполнению
-1. Получить бесплатную [JIRA](https://www.atlassian.com/ru/software/jira/free)
-2. Настроить её для своей "команды разработки"
-3. Создать доски kanban и scrum
+1. Получить бесплатную версию Jira - https://www.atlassian.com/ru/software/jira/work-management/free (скопируйте ссылку в адресную строку). Вы можете воспользоваться любым(в том числе бесплатным vpn сервисом) если сайт у вас недоступен. Кроме того вы можете скачать [docker образ](https://hub.docker.com/r/atlassian/jira-software/#) и запустить на своем хосте self-managed версию jira.
+2. Настроить её для своей команды разработки.
+3. Создать доски Kanban и Scrum.
+4. [Дополнительные инструкции от разработчика Jira](https://support.atlassian.com/jira-cloud-administration/docs/import-and-export-issue-workflows/).
 ```
 kanban = Projects -> Create project -> Kanban -> Use template -> Company-managed -> Create project
 ```
@@ -13,7 +14,9 @@ scrum = Projects -> Create project -> Scrum -> Use template -> Company-managed -
 ```
 
 #### Основная часть
-В рамках основной части необходимо создать собственные workflow для двух типов задач: bug и остальные типы задач. Задачи типа bug должны проходить следующий жизненный цикл:
+
+Необходимо создать собственные workflow для двух типов задач: bug и остальные типы задач. Задачи типа bug должны проходить жизненный цикл:
+
 1. Open -> On reproduce
 2. On reproduce <-> Open, Done reproduce
 3. Done reproduce -> On fix
@@ -22,7 +25,7 @@ scrum = Projects -> Create project -> Scrum -> Use template -> Company-managed -
 6. On test <-> On fix, Done
 7. Done <-> Closed, Open
 ```
-Settings -> Issues -> Workflows -> Add workflow -> bug
+Settings -> Issues -> Workflows -> Add workflow -> Bug Workflow
 ```
 
 <img src="bug.png" width="" height="500"/>
@@ -34,7 +37,7 @@ Settings -> Issues -> Workflows -> Add workflow -> bug
 4. On test <-> On develop, Done
 5. Done <-> Closed, Open
 ```
-Settings -> Issues -> Workflows -> Add workflow -> all_not_bug
+Settings -> Issues -> Workflows -> Add workflow -> Standart Workflow
 ```
 
 <img src="standart.png" width="" height="500"/>
@@ -43,9 +46,13 @@ Settings -> Issues -> Workflows -> Add workflow -> all_not_bug
 
 <img src="scheme.png" width="" height="500"/>
 
-Создать задачу с типом bug, попытаться провести его по всему workflow до Done. Создать задачу с типом epic, к ней привязать несколько задач с типом task, провести их по всему workflow до Done. При проведении обеих задач по статусам использовать kanban. Вернуть задачи в статус Open.
-Перейти в scrum, запланировать новый спринт, состоящий из задач эпика и одного бага, стартовать спринт, провести задачи до состояния Closed. Закрыть спринт.
+1. Создайте задачу с типом bug, попытайтесь провести его по всему workflow до Done. 
+1. Создайте задачу с типом epic, к ней привяжите несколько задач с типом task, проведите их по всему workflow до Done. 
+1. При проведении обеих задач по статусам используйте kanban. 
+1. Верните задачи в статус Open.
+1. Перейдите в Scrum, запланируйте новый спринт, состоящий из задач эпика и одного бага, стартуйте спринт, проведите задачи до состояния Closed. Закройте спринт.
+2. Если всё отработалось в рамках ожидания — выгрузите схемы workflow для импорта в XML. Файлы с workflow и скриншоты workflow приложите к решению задания.
 
-Если всё отработало в рамках ожидания - выгрузить схемы workflow для импорта в XML. Файлы с workflow приложить к решению задания.
+Файлы с workflow:
 [BugWorkflow](BugWorkflow.xml)
 [StandardWorkflow](StandardWorkflow-1.xml)
