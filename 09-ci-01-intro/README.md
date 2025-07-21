@@ -48,4 +48,4 @@ Settings -> Issues -> Workflows -> Add workflow -> all_not_bug
 
 Если всё отработало в рамках ожидания - выгрузить схемы workflow для импорта в XML. Файлы с workflow приложить к решению задания.
 [BugWorkflow](BugWorkflow.xml)
-[StandardWorkflow](StandardWorkflow -1.xml)
+[StandardWorkflow](StandardWorkflow-1.xml)
